@@ -1,0 +1,12 @@
+(library
+ (name cutline_core)
+ (public_name cutline.core)
+ (wrapped false)
+ (modules graph import codec)
+ (libraries yojson unix))
+
+(executable
+ (name main)
+ (public_name cutline)
+ (modules server main)
+ (libraries cutline_core cmdliner cohttp-lwt-unix lwt.unix yojson unix))

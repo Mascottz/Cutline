@@ -1,0 +1,12 @@
+_build/
+node_modules/
+web/elm-stuff/
+web/static/main.js
+*.cutline.json
+web/static/main.js.map
+.DS_Store
+*.log
+opam-switch/
+.cache/
+dist/
+coverage/

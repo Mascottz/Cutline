@@ -1,0 +1,22 @@
+opam-version: "2.0"
+name: "cutline"
+version: "0.1.0"
+synopsis: "I measure route changes in a local street graph"
+description: "I compare shortest paths before and after a hypothetical street closure."
+maintainer: "Mascottz <175293202+Mascottz@users.noreply.github.com>"
+authors: "Mascottz"
+license: "MIT"
+homepage: "https://github.com/mascottz/cutline"
+bug-reports: "https://github.com/mascottz/cutline/issues"
+dev-repo: "git+https://github.com/mascottz/cutline.git"
+build: [
+  ["dune" "build" "-p" name "-j" jobs]
+]
+depends: [
+  "ocaml" {>= "5.5.1" & < "5.6.0"}
+  "dune" {>= "3.24.2" & < "3.25"}
+  "cmdliner" {= "2.1.1"}
+  "cohttp-lwt-unix" {= "6.3.0"}
+  "yojson" {= "3.0.0"}
+  "alcotest" {= "1.9.1" & with-test}
+]

@@ -1,0 +1,12 @@
+{
+  "name": "yaba, lagos",
+  "snapshot_date": "2026-10-04",
+  "source_url": "https://api.openstreetmap.org/api/0.6/map?bbox=3.370,6.510,3.380,6.520",
+  "bbox": [3.370, 6.510, 3.380, 6.520],
+  "attribution": "© openstreetmap contributors",
+  "license": "odbl-1.0",
+  "osm_way_count": 199,
+  "coordinate_count": 1754,
+  "osm_api_generator": "openstreetmap-cgimap 2.1.0",
+  "scenario_note": "I use the street geometry as a real frozen extract and the selected closure as a hypothetical graph experiment."
+}

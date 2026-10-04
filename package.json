@@ -1,0 +1,14 @@
+{
+  "name": "cutline-tooling",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "test:elm": "elm-test"
+  },
+  "engines": {
+    "node": "22.23.3"
+  },
+  "devDependencies": {
+    "elm-test": "0.19.2-0"
+  }
+}

@@ -1,0 +1,4 @@
+(test
+ (name test_cutline)
+ (libraries cutline_core alcotest yojson unix)
+ (deps fixtures/mini.geojson ../data/demo/yaba.geojson))
