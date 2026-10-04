@@ -1,0 +1,43 @@
+name: CutLine checks
+
+on:
+  push:
+    branches:
+      - main
+    tags:
+      - 'v*'
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: I build and test the pinned stack
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - name: I check out the repository
+        uses: actions/checkout@v4
+
+      - name: I cache toolchains and package sources
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/cutline
+            ~/.cache/opam
+          key: ${{ runner.os }}-${{ runner.arch }}-cutline-${{ hashFiles('cutline.opam.locked', 'web/elm.json', 'package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-${{ runner.arch }}-cutline-
+
+      - name: I install the native build prerequisite
+        run: sudo apt-get update && sudo apt-get install --no-install-recommends -y pkg-config libgmp-dev
+
+      - name: I install pinned toolchains and dependencies
+        run: make setup
+
+      - name: I run all builds, tests, and the local HTTP smoke check
+        run: make test
