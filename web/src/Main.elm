@@ -786,8 +786,8 @@ viewMap state =
         ]
         ([ S.desc [] [ S.text "I draw a quiet street graph, the baseline route, the changed route, and each hypothetical closure." ] ]
             ++ baseLines
-            ++ beforeLines
             ++ afterLines
+            ++ beforeLines
             ++ selectedLines
             ++ closedLines
             ++ closureMarks

@@ -52,3 +52,4 @@ serve: build web-build
 clean:
 	@OPAMROOT="$(OPAM_ROOT)" "$(OPAM_BIN)" exec --root="$(OPAM_ROOT)" --switch=cutline -- dune clean
 	@rm -f web/static/main.js web/static/main.js.map
+	@rm -rf web/elm-stuff
