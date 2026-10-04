@@ -2,7 +2,7 @@
 
 I keep release notes concise and record graph scope beside interface changes.
 
-## I prepare v0.1.0, 2026-10-04
+## I ship v0.1.0, 2026-10-04
 
 ### Added
 
